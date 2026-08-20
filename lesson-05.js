@@ -69,7 +69,7 @@ function double(n) {
 }
 
 // Convert to function expression
-const double = function (n) {
+let double = function (n) {
   return n * 2;
 };
 
@@ -80,7 +80,7 @@ function shout(text) {
 }
 
 // Convert to one-line arrow function with implicit return
-const shout = (text) => `${text.toUpperCase()}!`;
+let shout = (text) => `${text.toUpperCase()}!`;
 
 console.log(shout("hello")); // "HELLO!"
 
