@@ -59,7 +59,9 @@ artists.forEach((artist) => console.log(artist.describe()));
 
 // * Three snippets. Predict each outcome in a comment, then verify one at a time.
 // ! Snippet one, a class call missing new. Uncomment after part one, predict first:
-const broken = Artist("Pinkfong", "Children's music", "11:31");
+// const broken = Artist("Pinkfong", "Children's music", "11:31");
+// fixed
+const broken = new Artist("Pinkfong", "Children's music", "11:31");
 // Prediction: TypeError: Class constructor Artist cannot be invoked without 'new'
 
 // ! Snippet two, an arrow function used as a method that reads this:
@@ -91,6 +93,9 @@ class FeaturedArtist extends Artist {
     return `${super.describe()} - ${this.blurb}`;
   }
 }
+
+let newFeaturedArtist = new FeaturedArtist("Yusuf's Code Symphony", "Rock", "4:30", "Check out this hot artist of the month for August 2026");
+console.log(newFeaturedArtist.describe());
 
 // TODO: Part five.
 // The file ends with a constructor function and two prototype method assignments, working code
